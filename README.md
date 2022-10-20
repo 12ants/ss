@@ -8,8 +8,8 @@ Example wget:
 
 
 
-<code>wget -O ss https://raw.githubusercontent.com/symbolen/ss/main/hello.sh && sh ss</code>
+<code>sh <(wget -O - https://raw.githubusercontent.com/symbolen/ss/main/hello.sh)</code>
 
 
 
-##  --  Enjoy!
+## Enjoy!
