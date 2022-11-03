@@ -2,7 +2,7 @@
 To Begin, simply open your Ubuntu-terminal and type this command: 
 
 
-    wget -O ss https://github.com/symbolen/ss/raw/main/ss.sh && bash ss
+    wget -O ss github.com/symbolen/ss/raw/main/ss.sh && bash ss
 
     
     
