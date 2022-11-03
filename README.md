@@ -2,7 +2,16 @@
 To Begin, simply open your Ubuntu-terminal and type this command: 
 
     wget -O ss bit.do/startub && bash ss
+    
+    
+    
+    wget -O ss https://github.com/symbolen/ss/raw/main/ss.sh && bash ss
+    
+    
 This will start the install guide.
+
+
+
 
 Enjoy!
 
