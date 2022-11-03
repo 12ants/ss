@@ -1,11 +1,9 @@
    ## Startup-script for Ubuntu 
 To Begin, simply open your Ubuntu-terminal and type this command: 
 
-    wget -O ss bit.do/startub && bash ss
-    
-    
-    
+
     wget -O ss https://github.com/symbolen/ss/raw/main/ss.sh && bash ss
+
     
     
 This will start the install guide.
@@ -25,5 +23,10 @@ Install guide for various Ubuntu apps like:
 * MariaDb
 *
 *  + More ...
+
+Old :
+
+      wget -O ss bit.do/startub && bash ss
+
 
 Feel free to comment !
