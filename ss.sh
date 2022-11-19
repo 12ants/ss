@@ -27,18 +27,22 @@ ${g} ; printf " System strong " ;
 sleep 4; echo ;
 ${d}
 clear;
-BLA_metro=( 0.4  ▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉ ▎▎▎▎▎▎▋▋▋▋▋▉▉▎▎▎▎▎▋▋▋▋▋▉▉▎▎▎▎▎▋▋▋▋▋ ▉▉▉▉▉▉▋▋▋▉▋ ▉▉▉▉▉▉▋▋▋▋▉ ▎▎▋▋▋▋▋▋▋▎▎▎▋▋▉ ▉▉▎▎▎▎▎▋▋▋▋▋▉▎▎▎ ▎▎▉▉▎▎▎▋▋▋▋▋▋▉ ▉▉▎▎▎▎▎▋▋▋▋▋▋▉▎▎▎▋▉ ▉▉▉▉▉▉▉▉▋▋▋▉ ▉▉▎▎▎▎▎▋▋▋▉ ▉▉▉▉▉▉▉▉▋▉ ▎▎▎▎▎▋▋▋▉ ▎▎▎▉▉▎▋▋▉ ▎▎▎▎▎▋▋▋▋▋▉ ▉▉▉▉▉▉▎▎▎▎▎▋▋▋▋▋▉ ▉▉▉▉▉▉▎▎▎▎▎▋▋▋▋▋▎▎▎▎▎▋▋▋▋▋▋▉▉ ▉▉▉▉▉▉▎▎▎▎▎▋▋▋▋▋▉ ▉▉▉▉▉▉▎▎▎▎▎▋▋▋▋▋▉▎▎▎▎▎▋▋▋▋▋▋▋▉ ▎▎▎▎▎▋▋▋▋▋▋▋▋▉ ▉▉▉▉▉▉▎▎▎▎▎▋▋▋▋▋▋▋▉ ▎▎▎▎▎▋▋▋▋▋▋▉ ▉▉▉▉▉▉▎▎▎▎▎▋▋▋▋▋▉ ▉▉▉▉▉▉▎▎▎▎▎▋▋▋▉ ) 
-declare -a BLA_active_loading_animation 
+
+BLA_metro=( 0.2 ..............▰▱▱▱▱▱▱ ..............▰▰▱▱▱▱▱ ..............▰▰▰▱▱▱▱ ..............▱▰▰▰▱▱▱ ..............▱▱▰▰▰▱▱ ..............▱▱▱▰▰▰▱ ..............▱▱▱▱▰▰▰ ..............▱▱▱▱▱▰▰ ..............▱▱▱▱▱▱▰ ..............▱▱▱▱▱▱▱ ............▰▱▱▱▱▱ ..............▰▰▰▱▱▱▱ ..............▱▰▰▰▱▱▱ ..............▱▱▰▰▰▱▱ ..............▱▱▱▰▰▰▱ ..............▱▱▱▱▰▰▰.............. ▱▱▱▱▱▰▰ ..............▱▱▱▱▱▱▰ ..............▱▱▱▱▱▱▱ ..............▱▱▱▱▱▱▱ ..............▱▱▱▱▱▱▱ ..............▱▱▱▱▱▱▱........▱▱▱▱▱▱▱ ..............▱▱▱▱▱▱▱ ..............▱▱▱▱▱▱▱ )
+declare -a BLA_active_loading_animation
 BLA::play_loading_animation_loop() {
-  while true ; do
-    for frame in "${BLA_active_loading_animation[@]}" ; do
-      $g ; tput civis ;
-      printf "\r%s ]"; printf "\r%s" "${frame}" ; $d; printf "\r%s" "    Loading: [ "; tput cuf 24 ; printf " ]"; 
-      sleep "${BLA_loading_animation_frame_interval}"
-      $d
-    done
-  done
+while true ; do
+for frame in "${BLA_active_loading_animation[@]}" ; do
+$g ; tput civis ;
+#printf "\r%s" "    [ ${frame} ]"
+printf "\r%s ]"; printf "\r%s" "${frame}" ; $d; printf "\r%s" "    Loading: [ "; tput cuf 6 ; printf " ]                                  "; 
+sleep "${BLA_loading_animation_frame_interval}"
+$d
+done
+done
 }
+
+
 
 BLA::start_loading_animation() {
   BLA_active_loading_animation=( "${@}" )
