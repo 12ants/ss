@@ -13,18 +13,18 @@ cd /home/tempstuff;
 g="tput setaf 2"
 red="tput setaf 1"
 d="tput sgr0"
-sleep 1; echo "      
-
-             -- Welcome to the shady installer!"; sleep 4;
-tput blink setaf 1 ; printf "
-
-       Commencing self-destruct sequence... " ; sleep 4; tput rev; printf " 
-                                                                
-             Self-destruct sequence failed...                   
-                                                                " ; echo ;
-sleep 2; echo ;
-${g} ; printf " System strong " ;
-sleep 4; echo ;
+#sleep 1; echo "      
+#
+#             -- Welcome to the shady installer!"; sleep 4;
+#tput blink setaf 1 ; printf "
+#
+#       Commencing self-destruct sequence... " ; sleep 4; tput rev; printf " 
+#                                                                
+#             Self-destruct sequence failed...                   
+#                                                                " ; echo ;
+#sleep 2; echo ;
+#${g} ; printf " System strong " ;
+#sleep 4; echo ;
 ${d}
 clear;
 
