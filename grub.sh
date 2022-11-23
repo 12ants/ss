@@ -10,7 +10,7 @@ cd /boot/grub/ ;
 ####################################
 #### -Download Picture--############
 ####################################
-wget https://github.com/symbolen/ss/raw/main/tard.jpg ;
+wget https://github.com/0smik/ss/raw/main/tard.jpg ;
 ####################################
 #### -Write GRUB config file--######
 ####################################
