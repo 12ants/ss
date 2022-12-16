@@ -17,7 +17,7 @@ wget https://github.com/0smik/ss/raw/main/tard.jpg ;
 echo '
 GRUB_BACKGROUND="/boot/grub/tard.jpg"
 GRUB_DEFAULT=saved
-GRUB_SAVEDEFAULT=false
+GRUB_SAVEDEFAULT=true
 GRUB_TIMEOUT_STYLE=menu
 GRUB_TIMEOUT=12
 GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
